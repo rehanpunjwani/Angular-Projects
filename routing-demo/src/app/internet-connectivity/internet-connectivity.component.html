@@ -1,0 +1,20 @@
+
+<div *ngIf="!Connection.status" style="position:fixed;
+            z-index: 2; /* above everything else */
+            top:0; left:0; bottom:0; right:0;
+            background:rgba(0,0,0,.6);
+">
+ 
+ <div class="toast fixed-bottom" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+          <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="toast-body ">
+         <h3 class="text-danger"> Please Check your Internet Connection </h3> 
+        </div>
+      </div>
+  </div>
+ </div>

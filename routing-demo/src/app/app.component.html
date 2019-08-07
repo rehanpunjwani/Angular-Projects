@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <div [ngSwitch]=""> -->
+<div style="text-align:center"  *ngIf="Connection.status">
+  <h1>
+  Routing and Navigation
+  </h1>
+    <nav  *ngIf="Connection.status">
+      <a routerLink="/departments-list">Departments</a>
+      <br>
+      <a routerLink="/employees">Employees</a>
+    </nav>
+
+  <app-internet-connectivity></app-internet-connectivity>
+
+  
+
+</div>
+<div *ngIf="!Connection.status">
+    <p>Connection time out {{Connection.status}}</p>
+</div>
+<router-outlet  *ngIf="Connection.status"></router-outlet>
+<!--Route view goes here -->
